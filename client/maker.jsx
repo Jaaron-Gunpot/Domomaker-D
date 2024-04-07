@@ -86,6 +86,8 @@ const App = () => {
 };
 
 const init = () =>{
-    root = createRoot(document.getElementById('content'));
+    const root = createRoot(document.getElementById('app'));
     root.render(<App />);
 };
+
+window.onload = init;
