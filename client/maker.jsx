@@ -64,9 +64,6 @@ const DomoList = (props) => {
                 <h3 className="domoAge">Age: {domo.age}</h3>
                 <h3 className="domoColor">Color: {domo.color}</h3>
                 <a href="#" className="deleteDomo" onClick={(e)=>{
-                    e.target.parentNode.querySelector('.domoName').value;
-                    e.target.parentNode.querySelector('.domoAge').value;
-                    e.target.parentNode.querySelector('.domoColor').value;
                     helper.sendPost('/deleteDomo', {name: domo.name, age: domo.age, color: domo.color}, props.triggerReload);
                 }}>Delete</a>
             </div>

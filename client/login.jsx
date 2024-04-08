@@ -35,6 +35,7 @@ const handleSignup = (e) => {
         helper.handleError('Passwords do not match');
         return false;
     }
+    console.log("sign attempt");
 
     helper.sendPost(e.target.action, { username, pass, pass2 });
     return false;
