@@ -18,7 +18,9 @@ const getDomos = async (req, res) => {
 
 const deleteDomo = async (req, res) => {
   try {
-    const id = { name: req.body.name, age: req.body.age, color: req.body.color, owner: req.session.account._id};
+    const id = {
+      name: req.body.name, age: req.body.age, color: req.body.color, owner: req.session.account._id,
+    };
     const domo = await Domo.findOneAndDelete(id).exec();
     return res.status(200).json({ message: 'Domo deleted!', domo });
   } catch (err) {
